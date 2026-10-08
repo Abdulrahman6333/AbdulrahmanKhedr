@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Abdulrahman Khedr — Mechatronics Engineer, Python Applications Developer, AI & n8n Automation, Embedded Systems and Robotics." />
+  <meta name="theme-color" content="#07111f" />
+  <title>Abdulrahman Khedr | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#07111f;--panel:#0c1929;--panel2:#0f2136;--text:#eef7ff;--muted:#9db2c8;
+      --line:rgba(120,187,255,.16);--blue:#47a8ff;--cyan:#44e6ff;--green:#54e6a4;
+      --shadow:0 24px 70px rgba(0,0,0,.32);--radius:24px;--max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:
+      radial-gradient(circle at 10% 5%,rgba(57,153,255,.18),transparent 28%),
+      radial-gradient(circle at 90% 15%,rgba(68,230,255,.10),transparent 26%),
+      linear-gradient(180deg,#07111f,#081525 46%,#07111f);color:var(--text);
+      font-family:Inter,system-ui,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(7,17,31,.72);border-bottom:1px solid var(--line)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.03em}.brand span{color:var(--cyan)}
+    .links{display:flex;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:white}
+    .hero{padding:92px 0 64px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:46px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:99px;background:rgba(255,255,255,.025);color:#b9d9f6;font-size:13px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}
+    h1{font-family:"Space Grotesk";font-size:clamp(46px,7vw,82px);line-height:.98;letter-spacing:-.055em;margin:22px 0}
+    h1 .grad{background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;color:transparent}
+    .lead{font-size:19px;color:var(--muted);max-width:760px}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:14px;border:1px solid var(--line);font-weight:700;font-size:14px;background:rgba(255,255,255,.025)}
+    .btn.primary{background:linear-gradient(135deg,#228df0,#22cbe8);color:#03101b;border:0}.btn:hover{transform:translateY(-2px);transition:.2s}
+    .profile-card{background:linear-gradient(145deg,rgba(20,46,73,.9),rgba(8,24,41,.95));border:1px solid var(--line);border-radius:32px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .profile-card:before{content:"";position:absolute;inset:-40% -20% auto auto;width:250px;height:250px;background:radial-gradient(circle,rgba(68,230,255,.2),transparent 65%)}
+    .avatar{width:96px;height:96px;border-radius:24px;object-fit:cover;border:1px solid rgba(255,255,255,.18)}
+    .mini{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}.mini div{padding:15px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .mini b{display:block;font-size:20px}.mini span{color:var(--muted);font-size:12px}
+    section{padding:72px 0}.sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+    .sec-head h2{font-family:"Space Grotesk";font-size:36px;letter-spacing:-.035em;margin:0}.sec-head p{color:var(--muted);max-width:620px;margin:0}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{border-radius:var(--radius);border:1px solid var(--line);background:linear-gradient(180deg,rgba(17,39,64,.9),rgba(8,23,39,.92));overflow:hidden;box-shadow:0 15px 45px rgba(0,0,0,.2)}
+    .cover{height:190px;padding:24px;display:flex;align-items:flex-end;position:relative;overflow:hidden;background:
+      radial-gradient(circle at 80% 20%,rgba(68,230,255,.23),transparent 33%),linear-gradient(135deg,#0d2948,#091827 65%)}
+    .cover:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(71,168,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(71,168,255,.08) 1px,transparent 1px);background-size:26px 26px}
+    .icon{position:relative;z-index:2;width:62px;height:62px;border:1px solid rgba(92,204,255,.32);border-radius:18px;display:grid;place-items:center;background:rgba(6,20,34,.72);font-size:30px}
+    .card-body{padding:24px}.card h3{margin:0 0 9px;font-size:22px;letter-spacing:-.02em}.card p{color:var(--muted);font-size:14px;margin:0 0 18px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:12px;padding:7px 9px;border-radius:10px;background:rgba(68,230,255,.06);border:1px solid var(--line);color:#c7eaff}
+    .cardfoot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:13px}.arrow{color:var(--cyan);font-weight:800}
+    .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skillbox{padding:22px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.025)}
+    .skillbox h3{font-size:16px;margin:0 0 10px}.skillbox p{margin:0;color:var(--muted);font-size:13px}
+    .timeline{display:grid;gap:16px}.item{display:grid;grid-template-columns:180px 1fr;gap:22px;padding:22px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .item time{color:#86c9ff;font-size:13px;font-weight:700}.item h3{margin:0 0 4px;font-size:18px}.item p{margin:0;color:var(--muted);font-size:14px}
+    .contact{padding-bottom:100px}.contactbox{padding:34px;border-radius:28px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(18,54,88,.9),rgba(8,25,42,.95));display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .contactbox h2{font-family:"Space Grotesk";font-size:32px;margin:0 0 8px}.contactbox p{margin:0;color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:13px}
+    @media(max-width:900px){.hero-grid,.projects{grid-template-columns:1fr}.skills-grid{grid-template-columns:repeat(2,1fr)}.links{display:none}.profile-card{max-width:560px}.item{grid-template-columns:1fr}.contactbox{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.hero{padding-top:60px}.skills-grid{grid-template-columns:1fr}.wrap{padding:0 18px}.cover{height:155px}.sec-head{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top">Abdulrahman<span>.</span></a>
+      <div class="links">
+        <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Open to software, automation & engineering opportunities</div>
+          <h1>Abdulrahman<br><span class="grad">Khedr</span></h1>
+          <p class="lead">Mechatronics Engineer and Python Applications Developer focused on AI & n8n automation, embedded systems, robotics, and practical engineering software.</p>
+          <div class="cta">
+            <a class="btn primary" href="#projects">View Projects →</a>
+            <a class="btn" href="https://www.linkedin.com/in/abdulrahman-khedr/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="https://github.com/Abdulrahman6333" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="mailto:khedr6333@gmail.com">Email Me</a>
+          </div>
+        </div>
+        <aside class="profile-card">
+          <img class="avatar" src="https://avatars.githubusercontent.com/u/119607485?v=4" alt="Abdulrahman Khedr">
+          <h3 style="font-size:24px;margin:18px 0 5px">Engineering × Software × Automation</h3>
+          <p style="margin:0;color:var(--muted)">Building useful tools that connect engineering thinking with practical software systems.</p>
+          <div class="mini">
+            <div><b>4</b><span>Featured public projects</span></div>
+            <div><b>Python</b><span>Primary application language</span></div>
+            <div><b>n8n</b><span>AI & workflow automation</span></div>
+            <div><b>ROS</b><span>Robotics & embedded systems</span></div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="sec-head"><div><h2>Featured Projects</h2><p>Selected work spanning academic software, AI automation, desktop applications, and workflow engineering.</p></div></div>
+        <div class="projects">
+          <article class="card">
+            <div class="cover"><div class="icon">🎓</div></div>
+            <div class="card-body">
+              <h3>Graduation Planner & Academic Advising System</h3>
+              <p>Academic decision-support application for analyzing student history and building structured graduation plans using GPA, prerequisites, retakes, electives and academic rules.</p>
+              <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Pandas</span><span class="tag">OpenPyXL</span><span class="tag">PDF Reports</span></div>
+              <div class="cardfoot"><span>Academic software</span><a class="arrow" href="https://github.com/Abdulrahman6333/graduation-planner" target="_blank">Repository ↗</a></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cover"><div class="icon">🤖</div></div>
+            <div class="card-body">
+              <h3>AI E-commerce Automation & Product Intelligence</h3>
+              <p>n8n workflows for AI-assisted product research, evidence-aware ranking, affiliate content planning, Telegram integration, TTS and short-form media automation.</p>
+              <div class="tags"><span class="tag">n8n</span><span class="tag">OpenRouter</span><span class="tag">REST APIs</span><span class="tag">Telegram</span><span class="tag">FFmpeg</span></div>
+              <div class="cardfoot"><span>AI automation</span><a class="arrow" href="https://github.com/Abdulrahman6333/ai-ecommerce-automation" target="_blank">Repository ↗</a></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cover"><div class="icon">📚</div></div>
+            <div class="card-body">
+              <h3>Engineering Course File Manager</h3>
+              <p>Privacy-safe portfolio edition of a desktop system for engineering course-file management, faculty assignments, checklist tracking and academic reporting.</p>
+              <div class="tags"><span class="tag">Python</span><span class="tag">PySide6</span><span class="tag">SQLite</span><span class="tag">Desktop UI</span></div>
+              <div class="cardfoot"><span>Engineering software</span><a class="arrow" href="https://github.com/Abdulrahman6333/engineering-course-file-manager" target="_blank">Repository ↗</a></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="cover"><div class="icon">💬</div></div>
+            <div class="card-body">
+              <h3>Energix Communication Automation Suite</h3>
+              <p>Python desktop application for Excel-driven WhatsApp automation, personalized email delivery, certificate generation, reusable templates and PDF attachments.</p>
+              <div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">Selenium</span><span class="tag">SMTP</span><span class="tag">Pillow</span></div>
+              <div class="cardfoot"><span>Business automation</span><a class="arrow" href="https://github.com/Abdulrahman6333/energix-communication-suite" target="_blank">Repository ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="sec-head"><div><h2>Technical Skills</h2><p>A mixed software and engineering stack built around practical automation and embedded systems.</p></div></div>
+        <div class="skills-grid">
+          <div class="skillbox"><h3>Software Development</h3><p>Python · C++ · OOP · SQLite · Pandas · Streamlit · PySide6 · Tkinter</p></div>
+          <div class="skillbox"><h3>AI & Automation</h3><p>n8n · AI Agents · OpenRouter · REST APIs · Selenium · Telegram automation · FFmpeg</p></div>
+          <div class="skillbox"><h3>Embedded Systems</h3><p>STM32 · AVR · Embedded C/C++ · UART · SPI · I²C · CAN · Embedded Linux</p></div>
+          <div class="skillbox"><h3>Robotics & Control</h3><p>ROS · MATLAB · Simulink · Control Systems · Motor Control · Mechatronics · SOLIDWORKS</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="sec-head"><div><h2>Experience</h2><p>Teaching, engineering software, automation and embedded systems experience.</p></div></div>
+        <div class="timeline">
+          <div class="item"><time>2024 — Present</time><div><h3>Teaching Assistant · Mechatronics Engineering</h3><p>Delivering tutorials and laboratory sessions, supporting assessments and academic advising, and developing practical software tools for academic workflows.</p></div></div>
+          <div class="item"><time>2021</time><div><h3>Engineering Training · Smart Technology Egypt</h3><p>Hands-on technical exposure supporting the broader mechatronics and embedded-systems engineering background.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="sec-head"><div><h2>Education</h2><p>Academic background in mechatronics, robotics, control and embedded systems.</p></div></div>
+        <div class="timeline">
+          <div class="item"><time>Oct 2024 — May 2025</time><div><h3>Pre-Master’s in Mechatronics Engineering</h3><p>Mansoura University · Grade A · Focus on advanced robotics, control systems, embedded systems and research methodology.</p></div></div>
+          <div class="item"><time>2018 — 2023</time><div><h3>B.Sc. Mechatronics, Robotics & Automation Engineering</h3><p>Higher Technological Institute · Graduation project: 6-Axis Industrial Robot Arm.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="contactbox">
+          <div><h2>Let’s build something useful.</h2><p>Open to Python development, AI/workflow automation, embedded systems and robotics opportunities.</p></div>
+          <div class="cta" style="margin:0">
+            <a class="btn primary" href="mailto:khedr6333@gmail.com">Contact Me</a>
+            <a class="btn" href="https://www.linkedin.com/in/abdulrahman-khedr/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">© <span id="year"></span> Abdulrahman Khedr · Built as a lightweight static portfolio.</div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
