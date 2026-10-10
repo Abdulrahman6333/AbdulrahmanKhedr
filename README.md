@@ -2,6 +2,9 @@
 
 A lightweight, responsive personal portfolio website for showcasing software, automation, embedded systems and robotics projects.
 
+## Live Website
+https://abdulrahman6333.github.io/AbdulrahmanKhedr/
+
 ## Sections
 - Hero / professional positioning
 - Featured projects
