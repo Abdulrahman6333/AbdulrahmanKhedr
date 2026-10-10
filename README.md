@@ -26,3 +26,7 @@ Open `index.html` in a browser.
 In this repository: **Settings → Pages → Deploy from a branch → main / root → Save**.
 
 The site is intentionally static and dependency-light.
+
+## CV Downloads
+- [Python & AI Automation CV](cv/Abdulrahman_Khedr_CV_Python_AI_Automation.docx)
+- [Mechatronics & Embedded CV](cv/Abdulrahman_Khedr_CV_Mechatronics_Embedded.docx)
